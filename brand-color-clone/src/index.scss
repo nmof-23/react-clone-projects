@@ -36,6 +36,18 @@ html , body {
 
 }
 
+.copied{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--bgColor);
+  color: var(--textColor) ;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  
+}
+
 .sidebar{
   width: 320px;
   min-width: 320px;
@@ -145,6 +157,7 @@ html , body {
           span{
             flex: 1;
             text-indent: 0;
+            cursor: pointer;
           }
         }
       }

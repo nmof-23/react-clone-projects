@@ -9,4 +9,3 @@ function getContrastYIQ(hexcolor){
 export default getContrastYIQ
 
 
-

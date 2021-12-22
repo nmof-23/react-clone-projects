@@ -2,6 +2,8 @@ import React,{useContext, useState} from "react";
 import Search from "./Search";
 import Brand from "./Brand";
 import MainContext from "../MainContext";
+import LazyLoad from 'react-lazyload';
+
 
 function Content() {
 
@@ -16,7 +18,9 @@ function Content() {
 
             <section className="brands">
                 {brands.map((brand , index) => (
-                    <Brand brand={brand} key={index} />
+                    <LazyLoad key={index} once={true} overflow={true} placeholder="Loading..."> 
+                        <Brand brand={brand}  />
+                  </LazyLoad>
                 ))}
 
 
