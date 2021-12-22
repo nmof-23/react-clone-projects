@@ -1,21 +1,14 @@
-import React,{useState} from "react";
+import React,{useContext, useState} from "react";
 import Search from "./Search";
-import BrandsData from "../brands.json"
 import Brand from "./Brand";
+import MainContext from "../MainContext";
 
 function Content() {
-    console.log(BrandsData);
 
-    const brandsArr = [];
-    Object.keys(BrandsData).map(key => (
-        brandsArr.push(BrandsData[key])
-    ))
-
-    console.log(brandsArr);
+    const {brands} = useContext(MainContext)
 
 
-    const [brands , setBrands] = useState(brandsArr)
-    return (
+       return (
         <main className="content">
             <header className="header"> 
                 <Search />
