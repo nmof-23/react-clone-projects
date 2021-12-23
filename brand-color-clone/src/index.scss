@@ -93,6 +93,13 @@ html , body {
     height: 50px;
     border-bottom: 1px solid #ccc;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+
+
     .search{
       flex: 1;
       position: relative;
@@ -115,6 +122,69 @@ html , body {
           height: 15px;
           width: 15px;          
         }
+      }
+    }
+
+    .download{
+      padding-right: 25px;
+      display: flex;
+      align-items: center;
+      .selected {
+        font-size: 14px;
+        font-weight: 500;
+        color:#999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // button{
+        //   background: transparent;
+        //   margin-right: 5px;
+        //   cursor: pointer;
+        //   padding-top: 2px;
+        //   svg{
+        //     display: block;
+        //     font-size: 14px;
+        //     path {
+        //       stroke: #999;
+        //     }
+        //   }
+        // }
+      }
+      .actions{
+        display: flex;
+        margin-right: 17px;
+        a , button {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: transparent;
+          padding-top: 2px;
+          cursor: pointer; 
+          svg{
+            width: 15px;
+            height: 15px;
+            path {
+              stroke: #999;
+            }
+            
+          }
+        }
+
+        .select {
+          margin-right: 7px;
+          height: 30px;
+          padding:0 15px;
+          appearance: none;
+          background: #eee;
+          border-radius: 4px;
+          text-align: center;
+          
+
+        }
+
+
       }
     }
   }
@@ -172,6 +242,8 @@ html , body {
   max-width: 720px;
   box-shadow: 0 0 15px 0 rgba(#000 , .1);
   padding: 50px;
+  background: #fff;
+  
   h3 {
     font-size: 30px;
     margin-bottom: 25px;
