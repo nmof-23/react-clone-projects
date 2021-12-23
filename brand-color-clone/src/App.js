@@ -13,6 +13,7 @@ import {
   Routes
 } from "react-router-dom";
 import Collections from './components/Collections';
+import {forceCheck} from "react-lazyload"
 
 function App() {
 
@@ -65,6 +66,13 @@ function App() {
     setBrands(brandsArr.filter(brand => brand.title.toLowerCase().includes(search)))
   },[search])
   
+
+  useEffect(() => {
+
+    forceCheck()
+
+  },[brands])
+
   return (
 
    <> 

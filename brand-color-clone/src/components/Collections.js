@@ -5,6 +5,7 @@ import LazyLoad from 'react-lazyload';
 import Brand from "./Brand";
 import { GrLinkPrevious} from "react-icons/gr";
 import { Link , useHistory } from "react-router-dom";
+import Loader from "./Loader";
 
 
 
@@ -47,7 +48,7 @@ function Collections() {
                 {selectedBrands.map(slug  => {
                     let brand = brands.find(brand => brand.slug === slug)
                     return (
-                        <LazyLoad key={brand.slug} once={true} overflow={true} placeholder="Loading..."> 
+                        <LazyLoad key={brand.slug} once={true} overflow={true} placeholder={<Loader />}> 
                             <Brand brand={brand}  />
                         </LazyLoad>
                     ) 
