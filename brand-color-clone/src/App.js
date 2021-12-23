@@ -5,6 +5,14 @@ import Content from './components/Content';
 import MainContext from './MainContext';
 import './App.css';
 import Copied from './Copied';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
+import Collections from './components/Collections';
 
 function App() {
 
@@ -63,7 +71,16 @@ function App() {
       <MainContext.Provider value={data}>
         {copied && <Copied color={copied} />}
         <Sidebar />
-        <Content />
+        <Router>
+            <Switch>
+                <Route path="/" exact>
+                    <Content />
+                </Route>
+                <Route path="/collections/:slugs">
+                    <Collections />
+                </Route>
+            </Switch>
+        </Router>
       </MainContext.Provider>
    </>
 

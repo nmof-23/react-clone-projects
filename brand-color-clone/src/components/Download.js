@@ -11,7 +11,7 @@ function Download() {
     
 
     const getLink = () => {
-        prompt("Here's the URL to share" , `http://localhost:3000/${selectedBrands.join(',')}`)
+        prompt("Here's the URL to share" , `http://localhost:3000/collections/${selectedBrands.join(',')}`)
     }
 
     useEffect(() => {
